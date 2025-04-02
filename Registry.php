@@ -13,7 +13,7 @@ class Registry
      * @param  bool  $lazy  If true, first argument will be called on first retreive and resulting object will be stored as real service
      * @return void
      */
-    public static function set(object $object, string $key = null, bool $lazy = false): void
+    public static function set(object $object, ?string $key = null, bool $lazy = false): void
     {
         if ($lazy) {
             if (!is_callable($object)) {
